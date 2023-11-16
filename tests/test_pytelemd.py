@@ -1,11 +1,12 @@
 import importlib
+import os
 import sys
 
 
 
 
-sys.path.append('/mnt/d/GitHub/pytelemd_prj')
-sys.path.append('/mnt/d/GitHub/pytelemd_prj/pytelemd')
+sys.path.append(os.path.abspath(os.path.basename(os.path.curdir)))
+sys.path.append(os.path.abspath(os.path.basename(os.path.curdir)) + '/pytelemd')
 
 importlib.import_module("pytelemd")
 import pytelemd
