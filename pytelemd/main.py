@@ -39,23 +39,6 @@ def corect_md(text):
     for i in range(len(title)):
         urls.append(f'[{title[i]}]({link[i]})')
     restract_text_url = replace_placeholders(restract_text_code_inline, urls, 'url')
+    text_md=replace_all_characters(restract_text_url)
     return restract_text_url
-
-
-if __name__ == '__main__':
-    text = '''HMAC (Hash-Based Message Authentication Code) - это криптографический метод аутентификации, который использует хэш-функцию и секретный ключ. С помощью HMAC можно осуществлять аутентификацию и проверять корректность и подлинность данных с использованием общих секретов, в отличие от подходов, использующих цифровые подписи и асимметричную криптографию.
-
-HMAC-алгоритм состоит из секретного ключа и хэш-функции. Секретный ключ представляет собой уникальную информацию или строку символов, известную как отправителю, так и получателю сообщения. Хэш-функция - это алгоритм отображения, который преобразует одну последовательность в другую последовательность.
-
-HMAC обеспечивает аутентификацию сообщений и гарантирует, что он происходит от ожидаемого отправителя, что делает его важным инструментом для обеспечения безопасности и доверия в онлайн-коммуникациях.
-
-Более подробную информацию о HMAC можно найти [здесь](https://www.okta.com/identity-101/hmac/).
-
-Также полезные материалы:
-- [What are MACs and HMACs? - Comparitech](https://www.comparitech.com/blog/information-security/what-are-macs-and-hmacs/)
-- [HMAC in Java | Baeldung](https://www.baeldung.com/java-hmac)
-- [Learn how to sign an HTTP request with HMAC - An Azure Communication](https://learn.microsoft.com/en-us/azure/communication-services/tutorials/hmac-header-tutorial)'''
-
-    print(text)
-    print(corect_md(text))
 
