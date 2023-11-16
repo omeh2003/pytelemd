@@ -38,6 +38,8 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Build package
+      run: python -m build -w
     - name: Upload pytest test results
       uses: actions/upload-artifact@v3
       with:
