@@ -1,13 +1,15 @@
 import importlib
 import sys
 
+
+
+
 sys.path.append('/mnt/d/GitHub/pytelemd_prj')
 sys.path.append('/mnt/d/GitHub/pytelemd_prj/pytelemd')
 
 importlib.import_module("pytelemd")
-
-
 import pytelemd
+
 from pprint import pprint
 from pytelemd.main import corect_md
 
@@ -19,7 +21,7 @@ class Testpytelemd:
 
     #  Returns the input text unmodified if it contains no markdown syntax
     def test_returns_input_text_unmodified_if_no_markdown_syntax(self):
-        text =pytelemd.pytelemd.corect_md("This is a plain text")
+        text =corect_md("This is a plain text")
         expected_output = "This is a plain text"
         assert text == expected_output
 
