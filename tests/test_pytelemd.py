@@ -78,3 +78,10 @@ class Testpytelemd:
         pprint(text)
 
         assert text == expected_output
+
+
+    def test_first_simbol_escape(self):
+        text="#dwlkxm \wcw  cw"
+        escp_text=pytelemd.pytelemd.corect_md(text=text)
+        expected_output=r'''\#dwlkxm \\wcw  cw'''
+        assert escp_text==expected_output
